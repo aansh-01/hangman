@@ -40,12 +40,29 @@ function displayWord() {
 
   if (innerWord === selectedWord) {
     finalMessage.innerText = "Congratulations! You won! ";
+    const a1 = document.querySelector('#someId1');
+    const a2 = document.querySelector('#someId2');
+    const a3 = document.querySelector('#someId3');
+    const a4 = document.querySelector('#someId4');
+    const a5 = document.querySelector('#someId5');
+    const a6 = document.querySelector('#someId6');
+    const a7 = document.querySelector('#someId7');
+    a1.href = 'index.html';
+    a2.href = 'index.html';
+    a3.href = 'index.html';
+    a4.href = 'index.html';
+    a5.href = 'index.html';
+    a6.href = 'index.html';
+    a7.href = 'index.html';
     kk = 0;
     clickImage()
 
   }
 }
 
+function rload() {
+  document.getElementById("game-container").onclick = window.location.reload();
+}
 function updateWrongLettersEl() {
   wrongLettersEl.innerHTML =
     wrongLetters.length > 0 ? "" : "";
@@ -62,7 +79,7 @@ function updateWrongLettersEl() {
     }
   });
 
-  if (wrongLetters.length+1 === figureParts.length) {
+  if (wrongLetters.length + 1 === figureParts.length) {
     finalMessage.innerText = "Oh..You lost !!";
     kk = 2;
     popup.style.display = "flex";
@@ -111,24 +128,24 @@ window.addEventListener("keydown", (e) => {
   if (kk == 2) {
     finalMessage.innerText = "You have already lost !!";
   }
-  if(kk==0)
-  {
+  if (kk == 0) {
     finalMessage.innerText = "You have already won! ";
+    rload();
   }
 });
 
 playAgainBtn.addEventListener("click", () => {
 
-    correctLetters.splice(0);
-    wrongLetters.splice(0);
+  correctLetters.splice(0);
+  wrongLetters.splice(0);
 
-    selectedWord = words[Math.floor(Math.random() * words.length)];
-    colorReset();
-    displayWord();
+  selectedWord = words[Math.floor(Math.random() * words.length)];
+  colorReset();
+  displayWord();
 
-    updateWrongLettersEl();
+  updateWrongLettersEl();
 
-    popup.style.display = "none";
+  popup.style.display = "none";
 });
 
 function colorReset() {
@@ -171,888 +188,865 @@ document.getElementById("x").addEventListener("click", x);
 document.getElementById("y").addEventListener("click", y);
 document.getElementById("z").addEventListener("click", z);
 function a() {
-  if(kk==1){
-  const letter = "a";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "a";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+    rload()
+  }
 }
 function b() {
-  if(kk==1){
-  const letter = "b";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "b";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } 
+    else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+    rload()
+  }
 }
 function c() {
-  if(kk==1){
-  const letter = "c";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "c";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function d() {
-  if(kk==1){
-  const letter = "d";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "d";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function e() {
-  if(kk==1){
-  const letter = "e";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "e";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function f() {
-  if(kk==1){
-  const letter = "f";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "f";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function g() {
-  if(kk==1){
-  const letter = "g";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "g";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function h() {
-  if(kk==1){
-  const letter = "h";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "h";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function i() {
-  if(kk==1){
-  const letter = "i";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "i";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function j() {
-  if(kk==1){
-  const letter = "j";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "j";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function k() {
-  if(kk==1){
-  const letter = "k";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "k";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function l() {
-  if(kk==1){
-  const letter = "l";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "l";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function m() {
-  if(kk==1){
-  const letter = "m";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "m";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function n() {
-  if(kk==1){
-  const letter = "n";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "n";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function o() {
-  if(kk==1){
-  const letter = "o";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "o";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function p() {
-  if(kk==1){
-  const letter = "p";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "p";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function q() {
-  if(kk==1){
-  const letter = "q";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "q";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function r() {
-  if(kk==1){
-  const letter = "r";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "r";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function s() {
-  if(kk==1){
-  const letter = "s";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "s";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function t() {
-  if(kk==1){
-  const letter = "t";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "t";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function u() {
-  if(kk==1){
-  const letter = "u";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "u";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function v() {
-  if(kk==1){
-  const letter = "v";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "v";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function w() {
-  if(kk==1){
-  const letter = "w";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "w";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function x() {
-  if(kk==1){
-  const letter = "x";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "x";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function y() {
-  if(kk==1){
-  const letter = "y";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "y";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 function z() {
-  if(kk==1){
-  const letter = "z";
-      document.getElementById(letter).style.color = 'lightgray';
+  if (kk == 1) {
+    const letter = "z";
+    document.getElementById(letter).style.color = 'lightgray';
 
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          if (correctLetters.length == 0) {
-            figureParts[0].style.display = "block";
-          }
-          correctLetters.push(letter);
-
-          displayWord();
-        } else {
-          showNotification();
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        if (correctLetters.length == 0) {
+          figureParts[0].style.display = "block";
         }
+        correctLetters.push(letter);
+
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
 
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        updateWrongLettersEl();
+      } else {
+        showNotification();
       }
     }
-    if (kk == 2) {
-      finalMessage.innerText = "You have already lost !!";
-    }
-    if(kk==0)
-    {
-      finalMessage.innerText = "You have already won! ";
-    }
+  }
+  if (kk == 2) {
+    finalMessage.innerText = "You have already lost !!";
+  }
+  if (kk == 0) {
+    finalMessage.innerText = "You have already won! ";
+  }
 }
 
 displayWord();
