@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hang-Man Game</title>
+</head>
+
+<body>
+    <h1>Hangman</h1>
+    <!-- <p>Find the hidden word -Enter a letter</p> -->
+    <section class="letters">
+        <span id="a">A</span>
+        <span id="b">B</span>
+        <span id="c">C</span>
+        <span id="d">D</span>
+        <span id="e">E</span>
+        <span id="f">F</span>
+        <span id="g">G</span>
+        <span id="h">H</span>
+        <span id="i">I</span>
+        <span id="j">J</span>
+        <span id="k">K</span>
+        <span id="l">L</span>
+        <span id="m">M</span>
+        <span id="n">N</span>
+        <span id="o">O</span>
+        <span id="p">P</span>
+        <span id="q">Q</span>
+        <span id="r">R</span>
+        <span id="s">S</span>
+        <span id="t">T</span>
+        <span id="u">U</span>
+        <span id="v">V</span>
+        <span id="w">W</span>
+        <span id="x">X</span>
+        <span id="y">Y</span>
+        <span id="z">Z</span>
+    </section>
+
+    <div class="game-container">
+
+        <div class="figure-container" height="250" width="200">
+            <!--  Stand for man hanging-->
+            <a href="index.html"><img id="a" style="position: absolute" src="images/hangman0.png" /></a>
+            <img class="figure-part" src="images/hangman7.png" />
+            <img class="figure-part" src="images/hangman1.png" />
+            <img class="figure-part" src="images/hangman2.png" />
+            <img class="figure-part" src="images/hangman3.png" />
+            <img class="figure-part" src="images/hangman4.png" />
+            <img class="figure-part" src="images/hangman5.png" />
+            <img class="figure-part" src="images/hangman6.png" />
+        </div>
+
+        <div class="wromg-letters-container">
+            <div id="wrong-letters">
+                <!-- <p>Wrong</p>
+                <Span>e,r,t</Span> -->
+            </div>
+        </div>
+
+        <div class="word" id="word">
+            <!-- <div class="letter">h</div>
+            <div class="letter">e</div>
+            <div class="letter">l</div>
+            <div class="letter">l</div>
+            <div class="letter">o</div> -->
+        </div>
+    </div>
+
+    <!--Conatiner for final maessages-->
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <!--Notification -->
+    <div class="notification-container" id="notification-container">
+        <p>You have already entered this letter</p>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+
+</html>
